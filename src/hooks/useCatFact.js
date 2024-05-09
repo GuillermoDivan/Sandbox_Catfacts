@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getRandomFact } from "./services/getRandomFact";
+import { getRandomFact }  from "../services/getRandomFact";
 
 export function useCatFact(){
 
@@ -9,6 +9,6 @@ export function useCatFact(){
         .then(setFact);
     }
 
-    useEffect(() => { refreshFact }, []);
+    useEffect(() => { refreshFact() }, []);
         return { fact, refreshFact }
 }
